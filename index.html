@@ -8,13 +8,39 @@
     <!-- DaisyUi -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c39147c565.js" crossorigin="anonymous"></script>
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-work-sans {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="font-work-sans">
     <header class="mx-auto px-24 container">
-
+        <h1 class="mt-5 font-semibold text-4xl text-center">AI Universe Hub</h1>
     </header>
-    <main class="mx-auto px-24 container">
+    <main class="mx-auto mt-10 px-24 container">
+        <section class="flex flex-col justify-center items-center">
+            <button class="bg-red-500 px-5 border-none rounded-xl text-white text-xl btn">Sort By Date</button>
+            <!-- loading spinner -->
+            <span id="loading-spinner" class="hidden mt-5 text-success loading loading-spinner"></span>
+
+            <div id="card-container" class="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16">
+
+            </div>
+            <button onclick="showAllItem()" id="see-more-btn"
+                class="hidden bg-red-500 mt-5 px-5 border-none rounded-xl text-white text-xl btn">
+                See More
+            </button>
+        </section>
+
 
     </main>
     <footer>
